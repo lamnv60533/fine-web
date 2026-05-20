@@ -1503,8 +1503,10 @@ section { padding: 8rem 0; position: relative; }
   .svc-card-expanded .expanded-cols { grid-template-columns: 1fr; gap: 2.5rem; }
 }
 
-/* Inner pages share About FINE's warm paper background. The page
-   banner stays white on top so the layout reads as a split. */
+/* ---------- Page banner (inner pages) ---------- */
+/* Body of inner pages shares About FINE's warm paper background. The page
+   banner stays white on top so the layout reads as a split (white banner /
+   soft-bg body), matching the About Us page. */
 .page-team, .page-services, .page-contact {
   background: var(--bg-soft);
 }
@@ -1513,8 +1515,6 @@ section { padding: 8rem 0; position: relative; }
 .page-contact .page-banner {
   background: #fff;
 }
-
-/* ---------- Page banner (inner pages) ---------- */
 .page-banner {
   padding: 14rem 0 4rem;
   background: var(--bg);
