@@ -218,7 +218,7 @@ function PageShell({ page, children }) {
     <>
       <Header active={page} lang={lang} setLang={setLang} onMenu={() => setDrawer(true)} />
       <Drawer open={drawer} onClose={() => setDrawer(false)} lang={lang} setLang={setLang} />
-      <main>
+      <main className={"page-" + page}>
         {typeof children === "function" ? children(lang) : children}
         <FooterBlock lang={lang} />
       </main>
