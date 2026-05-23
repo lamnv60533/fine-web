@@ -1,5 +1,5 @@
 /* pages.jsx — page-level components for the multi-page site.
-   Exposes window.FINE_PAGES = { Home, About, Team, Services, Partners, Contact }.
+   Exposes window.FINE_PAGES = { Home, About, Team, Services, Partners }.
 */
 /* global React */
 const { useState, useEffect, useRef } = React;
@@ -44,9 +44,9 @@ function Hero({ lang }) {
           <div>
             <h1 className="hero-title">
               {lang === "en" ? (
-                <>FINE Auditing<br/>Assurance you can <em>trust</em>,<br/>insights that move you forward.</>
+                <><span className="brand-underline">FINE Auditing</span><br/>Assurance you can <em>trust</em>,<br/>insights that move you forward.</>
               ) : (
-                <>Kiểm toán FINE<br/>Niềm tin <em>vững chắc</em>,<br/>hiểu biết dẫn lối tương lai.</>
+                <><span className="brand-underline">Kiểm toán FINE</span><br/>Niềm tin <em>vững chắc</em>,<br/>hiểu biết dẫn lối tương lai.</>
               )}
             </h1>
             <p className="hero-subtitle">
@@ -93,6 +93,7 @@ function Hero({ lang }) {
           <div className="hero-summary-head">
             {lang === "en" ? "Executive summary" : "Tổng quan"}
           </div>
+          <div className="summary-callout">
           {lang === "en" ? (
             <>
               <p>
@@ -124,6 +125,7 @@ function Hero({ lang }) {
               </p>
             </>
           )}
+          </div>
         </div>
       </div>
     </section>
@@ -244,11 +246,80 @@ function ClientsTeaser({ lang, limit = 12 }) {
         />
         <div className="clients-grid reveal">
           {visible.map(c => (
-            <div className="client-cell" key={c.name} title={c.name + " — " + c.sector}>
+            <a
+              className="client-cell"
+              key={c.name}
+              href={c.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={c.name + " — " + c.sector}
+            >
               <img src={c.logo} alt={c.name} loading="lazy" />
               <span className="hover-name">{c.name}</span>
-            </div>
+            </a>
           ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function WhatWeCanDoCards({ lang }) {
+  // Home-page variant: 6 simple cards (image + title + short blurb +
+  // Read more link to Our Services page). Mirrors hqco.com.vn layout.
+  const IMAGES = {
+    "01": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80&auto=format&fit=crop",
+    "02": "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=1200&q=80&auto=format&fit=crop",
+    "03": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&q=80&auto=format&fit=crop",
+    "04": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80&auto=format&fit=crop",
+    "05": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&q=80&auto=format&fit=crop",
+    "06": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80&auto=format&fit=crop",
+  };
+  return (
+    <section className="core-services home-svc-cards" data-screen-label="What We Can Do">
+      <div className="wrap">
+        <SectionHead
+          title={lang === "en" ? "What we can do for you" : "Năng lực dịch vụ"}
+        />
+        <div className="home-svc-grid reveal">
+          {SERVICES.map(s => (
+            <a
+              className="home-svc-card"
+              key={s.num}
+              href={"our-services.html#svc-" + s.num}
+              data-comment-anchor={"home-svc-" + s.num}
+            >
+              <div className="home-svc-img">
+                {IMAGES[s.num] ? (
+                  <img src={IMAGES[s.num]} alt={s.title} loading="lazy" />
+                ) : (
+                  <div className="placeholder">
+                    <span className="hnum">{s.num}</span>
+                    <span className="htag">{s.tag.toUpperCase()}</span>
+                  </div>
+                )}
+              </div>
+              <div className="home-svc-body">
+                <h3 className="home-svc-title">
+                  {lang === "en" ? s.title : s.title_vn}
+                </h3>
+                <p className="home-svc-desc">
+                  {lang === "en" ? s.short : s.short_vn}
+                </p>
+                <span className="home-svc-readmore">
+                  <span>{lang === "en" ? "Read more…" : "Xem thêm…"}</span>
+                  <span className="arrow">→</span>
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        <div className="section-cta reveal">
+          <a href="our-services.html" className="btn primary">
+            <span>{lang === "en" ? "Explore all services" : "Xem toàn bộ dịch vụ"}</span>
+            <span className="arrow">→</span>
+          </a>
         </div>
       </div>
     </section>
@@ -260,7 +331,7 @@ function Home({ lang }) {
     <>
       <Hero lang={lang} />
       <StatsBand lang={lang} />
-      <WhatWeCanDo lang={lang} />
+      <WhatWeCanDoCards lang={lang} />
       <ClientsTeaser lang={lang} />
     </>
   );
@@ -287,17 +358,19 @@ function AboutBody({ lang }) {
                 <p>
                   <span className="orange">FINE</span> was incorporated as a limited liability
                   professional services firm providing auditing, accounting, taxation and financial
-                  advisory services to economic organizations across all sectors on a{" "}
-                  <span className="orange">national scale</span>.
+                  advisory services to economic organizations across all sectors.
                 </p>
                 <p>
-                  Our mission is to provide trusted, best-in-class financial solutions that enable
-                  clients to make informed decisions, drive sustainable growth, and generate
-                  enduring value.
+                  Leveraging deep professional expertise and an{" "}
+                  <span className="orange">integrity-driven approach</span>, FINE goes beyond
+                  service delivery to commit as a trusted strategic partner, supporting clients in
+                  achieving sustainable growth and long-term value creation.
                 </p>
                 <p>
-                  FINE distinguishes itself not only through technical excellence but also through a
-                  deep commitment to treating our clients' challenges as our own.
+                  Our mission is to deliver trusted, high-quality financial solutions that enable
+                  clients to make informed decisions, drive sustainable growth, and create long-term
+                  value. Our operations are guided by{" "}
+                  <span className="orange">three core values</span>:
                 </p>
               </>
             ) : (
@@ -532,19 +605,107 @@ function ServicesAccordion({ lang }) {
   );
 }
 
-function Services({ lang }) {
+function ServicesDetail({ lang }) {
+  // Thematic background photos per service number (Unsplash, free to use).
+  // Swap any value here for your own brand photography.
+  const IMAGES = {
+    "01": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1600&q=80&auto=format&fit=crop", // audit · charts + hand
+    "02": "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=1600&q=80&auto=format&fit=crop", // tax · calculator + forms
+    "03": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1600&q=80&auto=format&fit=crop", // accountancy · ledger
+    "04": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1600&q=80&auto=format&fit=crop", // payroll · paperwork desk
+    "05": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1600&q=80&auto=format&fit=crop", // business set-up · handshake
+    "06": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1600&q=80&auto=format&fit=crop", // M&A · meeting / boardroom
+  };
+
+  // Read which service to show from URL hash (#svc-NN), default to first.
+  const initial = () => {
+    const m = window.location.hash.match(/svc-(\d+)/);
+    if (!m) return 0;
+    const idx = SERVICES.findIndex(s => s.num === m[1].padStart(2, "0"));
+    return idx >= 0 ? idx : 0;
+  };
+  const [active, setActive] = useState(initial);
+
+  useEffect(() => {
+    const onHash = () => {
+      const m = window.location.hash.match(/svc-(\d+)/);
+      if (!m) return;
+      const idx = SERVICES.findIndex(s => s.num === m[1].padStart(2, "0"));
+      if (idx >= 0) setActive(idx);
+    };
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
+  }, []);
+
+  const select = (i) => {
+    setActive(i);
+    history.replaceState(null, "", "#svc-" + SERVICES[i].num);
+    if (window.scrollY > 200) window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const s = SERVICES[active];
+
   return (
-    <>
-      <PageBanner
-        eyebrow={lang === "en" ? "03 · Our Services" : "03 · Dịch vụ"}
-        title={lang === "en" ? "Six disciplines, one standard of professional care." : "Sáu lĩnh vực, một tiêu chuẩn dịch vụ chuyên nghiệp."}
-        lead={lang === "en"
-          ? "Audit, tax, accounting, payroll, business set-up, and M&A advisory — each led by a partner with deep technical credentials. Click any card to read the full scope."
-          : "Kiểm toán, thuế, kế toán, tiền lương, thành lập doanh nghiệp và tư vấn M&A — mỗi dịch vụ dẫn dắt bởi Giám đốc có chuyên môn sâu. Nhấp vào từng thẻ để xem chi tiết."}
-      />
-      <WhatWeCanDo lang={lang} withCta={false} />
-    </>
+    <section className="services-detail" data-screen-label={"Services · " + s.title}>
+      <div className="wrap">
+        <div className="sd-grid">
+          <aside className="sd-sidebar">
+            <h3 className="sd-sidebar-title">
+              {lang === "en" ? "Our services" : "Dịch vụ"}
+            </h3>
+            <ul>
+              {SERVICES.map((svc, i) => (
+                <li key={svc.num}>
+                  <a
+                    href={"#svc-" + svc.num}
+                    className={i === active ? "active" : ""}
+                    onClick={(e) => { e.preventDefault(); select(i); }}
+                  >
+                    {lang === "en" ? svc.title : svc.title_vn}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </aside>
+
+          <div className="sd-main">
+            <div className="sd-hero">
+              {IMAGES[s.num] ? (
+                <img className="sd-hero-img" src={IMAGES[s.num]} alt={s.title} />
+              ) : (
+                <div className="sd-hero-placeholder">
+                  <span className="sd-hero-num">{s.num}</span>
+                  <span className="sd-hero-tag">{s.tag.toUpperCase()}</span>
+                </div>
+              )}
+              <div className="sd-hero-band">
+                <h1>{lang === "en" ? s.title : s.title_vn}</h1>
+                <div className="sd-hero-band-vn">
+                  {lang === "en" ? s.title_vn : s.title}
+                </div>
+              </div>
+            </div>
+
+            <div className="sd-dots" aria-hidden="true"></div>
+
+            <div className="sd-body">
+              <p className="sd-lead">{lang === "en" ? s.short : s.short_vn}</p>
+              <p className="sd-intro">
+                {lang === "en" ? "We can work on situations involving:" : "Chúng tôi đồng hành cùng các nhu cầu sau:"}
+              </p>
+              <ul className="sd-bullets">
+                {(lang === "en" ? s.bullets : s.bullets_vn).map(b => <li key={b}>{b}</li>)}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
+}
+
+function Services({ lang }) {
+  return <ServicesDetail lang={lang} />;
 }
 
 /* ============================================================ PARTNERS */
@@ -595,10 +756,17 @@ function ClientsBody({ lang }) {
         />
         <div className="clients-grid reveal">
           {CLIENTS.map(c => (
-            <div className="client-cell" key={c.name} title={c.name + " — " + c.sector}>
+            <a
+              className="client-cell"
+              key={c.name}
+              href={c.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={c.name + " — " + c.sector}
+            >
               <img src={c.logo} alt={c.name} loading="lazy" />
               <span className="hover-name">{c.name}</span>
-            </div>
+            </a>
           ))}
         </div>
       </div>
@@ -622,67 +790,5 @@ function Partners({ lang }) {
   );
 }
 
-/* ============================================================ CONTACT (own page) */
-function ContactBody({ lang }) {
-  return (
-    <section className="contact-page" data-screen-label="Contact page">
-      <div className="wrap">
-        <SectionHead
-          wide
-          title={lang === "en" ? "Get in touch" : "Liên hệ với chúng tôi"}
-          lead={lang === "en"
-            ? "Reach out to any director directly. We respond within one business day."
-            : "Liên hệ trực tiếp với bất kỳ Giám đốc nào. Phản hồi trong vòng một ngày làm việc."}
-        />
 
-        <div className="contact-page-grid reveal">
-          <div className="contact-office-block">
-            <div className="contact-office">
-              <div className="big">FINE Auditing Limited Liability Company</div>
-              <div className="addr">14 Truong Quyen, Xuan Hoa Ward,<br/>Ho Chi Minh City, Vietnam</div>
-              <div className="phone-row">
-                <div>
-                  <div className="lbl">Tel</div>
-                  <div className="val">+84 28 818 1608</div>
-                </div>
-                <div>
-                  <div className="lbl">Web</div>
-                  <div className="val">www.fineaudit.vn</div>
-                </div>
-              </div>
-            </div>
-            <a className="btn primary" style={{ marginTop: "2rem" }} href={"mailto:chauntm@fineaudit.vn"}>
-              <span>{lang === "en" ? "Start a conversation" : "Bắt đầu trao đổi"}</span>
-              <span className="arrow">→</span>
-            </a>
-          </div>
-
-          <div className="contact-people-block">
-            {CONTACTS.map(p => (
-              <div className="contact-person-card" key={p.email}>
-                <div className="pname">{lang === "en" ? p.name : p.name_vn}</div>
-                <div className="prole">{lang === "en" ? p.role : p.role_vn}</div>
-                <div className="prow"><span className="lbl">Tel</span> <span>{p.phone}</span></div>
-                <div className="prow"><span className="lbl">Email</span> <a href={"mailto:" + p.email}>{p.email}</a></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Contact({ lang }) {
-  return (
-    <>
-      <PageBanner
-        eyebrow={lang === "en" ? "05 · Contact" : "05 · Liên hệ"}
-        title={lang === "en" ? "Ready to partner with your business." : "Sẵn sàng đồng hành cùng doanh nghiệp của bạn."}
-      />
-      <ContactBody lang={lang} />
-    </>
-  );
-}
-
-window.FINE_PAGES = { Home, About, Team, Services, Partners, Contact };
+window.FINE_PAGES = { Home, About, Team, Services, Partners };

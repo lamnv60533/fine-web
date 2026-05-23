@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Activate FormSubmit</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      max-width: 520px;
+      margin: 60px auto;
+      padding: 0 24px;
+      color: #222;
+      line-height: 1.55;
+    }
+    h1 { font-size: 22px; margin-bottom: 8px; }
+    p { color: #555; font-size: 15px; }
+    ol li { margin: 8px 0; }
+    code {
+      background: #f3f3f3;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 13px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 22px;
+      background: #1a4e8f;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+    button:hover { background: #0f3868; }
+    .ok {
+      margin-top: 16px;
+      padding: 12px 16px;
+      background: #e8f5e9;
+      border-left: 3px solid #2e7d32;
+      color: #1b4d20;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h1>One-time FormSubmit activation</h1>
+  <p>This page sends a single dummy submission to FormSubmit so it emails you a confirmation link. You only need to do this once.</p>
+
+  <ol>
+    <li>Click the button below — a new tab opens with FormSubmit's confirmation page.</li>
+    <li>Check <code>lamnv60533@gmail.com</code> for an email from FormSubmit.</li>
+    <li>Click the <strong>"Confirm your email"</strong> link in it.</li>
+    <li>That's it — close both tabs. The contact form on the site will now work.</li>
+  </ol>
+
+  <form action="https://formsubmit.co/lamnv60533@gmail.com" method="POST" target="_blank">
+    <input type="hidden" name="name" value="Activation test" />
+    <input type="hidden" name="email" value="activation@example.com" />
+    <input type="hidden" name="message" value="This is a one-time activation submission. You can ignore it." />
+    <input type="hidden" name="_subject" value="FormSubmit activation" />
+    <input type="hidden" name="_captcha" value="false" />
+    <button type="submit">Send activation request</button>
+  </form>
+</body>
+</html>

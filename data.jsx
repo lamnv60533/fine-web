@@ -7,7 +7,6 @@ const NAV = [
   { page: "team",     href: "our-team.html",      label: "Our Team",     vn: "Đội ngũ" },
   { page: "services", href: "our-services.html",  label: "Our Services", vn: "Dịch vụ" },
   { page: "partners", href: "our-partners.html",  label: "Our Partners", vn: "Đối tác" },
-  { page: "contact",  href: "contact.html",       label: "Contact",      vn: "Liên hệ" },
 ];
 
 const VALUES = [
@@ -16,7 +15,7 @@ const VALUES = [
     vn: "Chính trực",
     initial: "I",
     blurb:
-      "We place the highest value on integrity, which underpins our audit profession and ensures the trust and confidence of our clients and their stakeholders.",
+      "Integrity is the foundation of our professional conduct. We uphold the highest ethical standards in every engagement, fostering trust and confidence among our clients and stakeholders.",
     blurb_vn:
       "Chúng tôi đề cao tính chính trực như giá trị cốt lõi nền tảng của nghề kiểm toán, làm cơ sở xây dựng niềm tin và sự tín nhiệm từ khách hàng và các bên liên quan.",
   },
@@ -25,7 +24,7 @@ const VALUES = [
     vn: "Thịnh vượng",
     initial: "F",
     blurb:
-      "Insights that turn financial data into growth for our clients and their stakeholders.",
+      "We transform financial data into meaningful insights, empowering clients to identify opportunities, manage risks, and achieve sustainable growth.",
     blurb_vn:
       "Chuyển hóa dữ liệu tài chính thành tăng trưởng bền vững cho khách hàng và các bên liên quan.",
   },
@@ -34,7 +33,7 @@ const VALUES = [
     vn: "Trường tồn",
     initial: "E",
     blurb:
-      "Partnering with clients across every business cycle for sustainable, long-term growth.",
+      "FINE partners with clients throughout the business lifecycle, focusing on long-term solutions that ensure stability, resilience, and enduring success.",
     blurb_vn:
       "Đồng hành cùng khách hàng qua mọi chu kỳ kinh doanh — bền vững, lâu dài.",
   },
@@ -287,30 +286,30 @@ const TEAM = [
 ];
 
 const CLIENTS = [
-  { name: "Gunzetal", logo: "assets/clients/Gunzetal.jpg", sector: "Manufacturing" },
-  { name: "Mass", logo: "assets/clients/Mass.jpg", sector: "Manufacturing" },
-  { name: "Cotecna", logo: "assets/clients/Cotecna.jpg", sector: "Inspection" },
-  { name: "Glandcore", logo: "assets/clients/Glandcore.jpg", sector: "Trading" },
-  { name: "Mentfield", logo: "assets/clients/Mentfield.jpg", sector: "Logistics" },
-  { name: "ezFly", logo: "assets/clients/GoHappy.jpg", sector: "Travel" },
-  { name: "EMM", logo: "assets/clients/Emm.jpg", sector: "Industrial" },
-  { name: "Nankai", logo: "assets/clients/Nankai.jpg", sector: "Industrial" },
-  { name: "Lautan", logo: "assets/clients/Lautan.jpg", sector: "Trading" },
-  { name: "Caritas Vietnam", logo: "assets/clients/Caritas.jpg", sector: "NGO" },
-  { name: "Việt Trung", logo: "assets/clients/VietTrung.jpg", sector: "Manufacturing" },
-  { name: "Bita's", logo: "assets/clients/Bitas.jpg", sector: "Footwear" },
-  { name: "TVE / Tri Việt", logo: "assets/clients/TriViet.jpg", sector: "Services" },
-  { name: "Fillon Technologies", logo: "assets/clients/Fillon.jpg", sector: "Technology" },
-  { name: "Daco Logistics", logo: "assets/clients/Daco.jpg", sector: "Logistics" },
-  { name: "Kido Group", logo: "assets/clients/Kido.jpg", sector: "F&B" },
-  { name: "Nipon", logo: "assets/clients/Nipon.jpg", sector: "Technology" },
-  { name: "Tong Hong Tannery", logo: "assets/clients/TongHong.jpg", sector: "Leather" },
-  { name: "DreamChef", logo: "assets/clients/Dreamchef.jpg", sector: "F&B" },
-  { name: "Tigermed", logo: "assets/clients/Tigermed.jpg", sector: "Healthcare" },
-  { name: "Gia Khải Investment", logo: "assets/clients/GiaKhai.jpg", sector: "Investment" },
-  { name: "SDB", logo: "assets/clients/SDB.jpg", sector: "Manufacturing" },
-  { name: "MZST / Molvizadah", logo: "assets/clients/Molvizadah.jpg", sector: "Industrial" },
-  { name: "Asama", logo: "assets/clients/Asama.jpg", sector: "Industrial" },
+  { name: "Gunzetal", logo: "assets/clients/Gunzetal.jpg", sector: "Manufacturing", url: "http://www.gunzetal.com/" },
+  { name: "Mass", logo: "assets/clients/Mass.jpg", sector: "Manufacturing", url: "http://www.mass.co.th/home" },
+  { name: "Cotecna", logo: "assets/clients/Cotecna.jpg", sector: "Inspection", url: "https://www.cotecna.com/en" },
+  { name: "Glandcore", logo: "assets/clients/Glandcore.jpg", sector: "Trading", url: "https://glandcore.com.vn/" },
+  { name: "Mentfield", logo: "assets/clients/Mentfield.jpg", sector: "Logistics", url: "http://www.mentfield.com/" },
+  { name: "ezFly", logo: "assets/clients/GoHappy.jpg", sector: "Travel", url: "https://ezfly.com/" },
+  { name: "EMM", logo: "assets/clients/Emm.jpg", sector: "Industrial", url: "https://elektrim.com.vn/" },
+  { name: "Nankai", logo: "assets/clients/Nankai.jpg", sector: "Industrial", url: "https://www.aglc.co.jp/" },
+  { name: "Lautan", logo: "assets/clients/Lautan.jpg", sector: "Trading", url: "https://lautan-luas.com.vn/vi/" },
+  { name: "Caritas Vietnam", logo: "assets/clients/Caritas.jpg", sector: "NGO", url: "https://caritasvietnam.org/" },
+  { name: "Việt Trung", logo: "assets/clients/VietTrung.jpg", sector: "Manufacturing", url: "https://viettrung.com/" },
+  { name: "Bita's", logo: "assets/clients/Bitas.jpg", sector: "Footwear", url: "https://bitas.com.vn/" },
+  { name: "TVE / Tri Việt", logo: "assets/clients/TriViet.jpg", sector: "Services", url: "https://trivietco.vn/" },
+  { name: "Fillon Technologies", logo: "assets/clients/Fillon.jpg", sector: "Technology", url: "https://www.fillontech.com/en/corporate/homepage/" },
+  { name: "Daco Logistics", logo: "assets/clients/Daco.jpg", sector: "Logistics", url: "https://dacologistics.com/vi/home/" },
+  { name: "Kido Group", logo: "assets/clients/Kido.jpg", sector: "F&B", url: "https://www.kdc.vn/" },
+  { name: "Nipon", logo: "assets/clients/Nipon.jpg", sector: "Technology", url: "https://www.niponvietnam.com.vn/" },
+  { name: "Tong Hong Tannery", logo: "assets/clients/TongHong.jpg", sector: "Leather", url: "http://www.tong-hong.com/" },
+  { name: "DreamChef", logo: "assets/clients/Dreamchef.jpg", sector: "F&B", url: "http://www.dreamchef.kr/vn/Vietnam" },
+  { name: "Tigermed", logo: "assets/clients/Tigermed.jpg", sector: "Healthcare", url: "https://tigermedgrp.com/en/homepage" },
+  { name: "Gia Khải Investment", logo: "assets/clients/GiaKhai.jpg", sector: "Investment", url: "https://diaocgiakhai.vn/" },
+  { name: "SDB", logo: "assets/clients/SDB.jpg", sector: "Manufacturing", url: "https://www.savinodelbene.com/company/" },
+  { name: "MZST / Molvizadah", logo: "assets/clients/Molvizadah.jpg", sector: "Industrial", url: "https://www.molvizadahsons.com/" },
+  { name: "Asama", logo: "assets/clients/Asama.jpg", sector: "Industrial", url: "https://asamabike.com/" },
 ];
 
 const STATS = [
