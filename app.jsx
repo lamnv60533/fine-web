@@ -85,12 +85,8 @@ function Header({ active, lang, setLang, onMenu }) {
   return (
     <header className={"header" + (scrolled ? " scrolled" : "")} data-screen-label="Header">
       <div className="wrap">
-        <a href="#home" className="brand" data-comment-anchor="brand">
-          <span className="brand-mark">F</span>
-          <span className="brand-text">
-            <span className="name">FINE<span>.</span></span>
-            <span className="sub">Auditing · Since 2006</span>
-          </span>
+        <a href="#home" className="brand" data-comment-anchor="brand" aria-label="FINE Auditing — since 2006">
+          <img src="assets/site/fine-logo-header.png" alt="FINE Auditing" className="brand-logo" />
         </a>
 
         <nav className="nav">
@@ -117,11 +113,8 @@ function Drawer({ open, onClose, lang, setLang }) {
   return (
     <div className="drawer">
       <div className="drawer-head">
-        <a className="brand" onClick={onClose}>
-          <span className="brand-mark">F</span>
-          <span className="brand-text">
-            <span className="name">FINE<span>.</span></span>
-          </span>
+        <a className="brand" onClick={onClose} aria-label="FINE Auditing">
+          <img src="assets/site/fine-logo-header.png" alt="FINE Auditing" className="brand-logo" />
         </a>
         <button onClick={onClose}>✕ Close</button>
       </div>
