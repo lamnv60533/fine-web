@@ -27,10 +27,22 @@ function applyAccent(hex) {
 
 /* ---------- hooks ---------- */
 function useTweaks(defaults) {
-  const [t, setT] = useState(defaults);
+  const STORE_KEY = "fine_tweaks";
+  const [t, setT] = useState(() => {
+    try {
+      const saved = JSON.parse(window.localStorage.getItem(STORE_KEY) || "{}");
+      return { ...defaults, ...saved };
+    } catch (e) {
+      return defaults;
+    }
+  });
   const set = (k, v) => {
     const patch = typeof k === "string" ? { [k]: v } : k;
-    setT(s => ({ ...s, ...patch }));
+    setT(s => {
+      const next = { ...s, ...patch };
+      try { window.localStorage.setItem(STORE_KEY, JSON.stringify(next)); } catch (e) {}
+      return next;
+    });
     try { window.parent.postMessage({ type: "__edit_mode_set_keys", edits: patch }, "*"); } catch (e) {}
   };
   return [t, set];
@@ -233,13 +245,14 @@ function FooterBlock({ lang, compact }) {
             </h2>
             <p className="lead reveal">
               {lang === "en"
-                ? "Ready to partner with your business. Reach out to any of our directors directly — they handle every engagement from first conversation to delivery."
-                : "Sẵn sàng đồng hành cùng doanh nghiệp của bạn. Liên hệ trực tiếp với các Giám đốc của chúng tôi — họ trực tiếp tham gia mọi dịch vụ từ buổi gặp đầu tiên đến khi hoàn thành."}
+                ? "Ready to partner with your business. Reach out to us directly."
+                : "Sẵn sàng đồng hành cùng doanh nghiệp của bạn. Liên hệ trực tiếp với chúng tôi."}
             </p>
           </>
         )}
 
-        <div className="footer-card reveal">
+        <div className="footer-card footer-contact reveal">
+          <div className="footer-contact-info">
           <div className="office">FINE Auditing Limited Liability Company</div>
 
           <ul className="footer-info-list">
@@ -287,21 +300,10 @@ function FooterBlock({ lang, compact }) {
               </a>
             </li>
           </ul>
-
-          <div className="contacts-grid">
-            {CONTACTS.map(p => (
-              <div className="contact-row" key={p.email}>
-                <div className="nm">{lang === "en" ? p.name : p.name_vn}</div>
-                <div className="pos">{lang === "en" ? p.role : p.role_vn}</div>
-                <div className="ph">{p.phone}</div>
-                <div className="em"><a href={"mailto:" + p.email}>{p.email}</a></div>
-              </div>
-            ))}
           </div>
-        </div>
 
-        {!compact && (
-          <div className="footer-getintouch reveal">
+          {!compact && (
+          <div className="footer-contact-form">
             <div className="footer-getintouch-head">
               <h3>{lang === "en" ? "Get in touch" : "Liên hệ với chúng tôi"}</h3>
               <p>{lang === "en"
@@ -312,7 +314,8 @@ function FooterBlock({ lang, compact }) {
               <FooterContactForm lang={lang} />
             </div>
           </div>
-        )}
+          )}
+        </div>
 
         <div className="footer-bottom">
           <span>© 2026 FINE Auditing Limited Liability Company</span>

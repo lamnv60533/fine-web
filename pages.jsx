@@ -49,11 +49,19 @@ function Hero({ lang }) {
                 <><span className="brand-underline">Kiểm toán FINE</span><br/>Niềm tin <em>vững chắc</em>,<br/>hiểu biết dẫn lối tương lai.</>
               )}
             </h1>
-            <p className="hero-subtitle">
-              {lang === "en"
-                ? "Independent professional services firm — audit, tax, accounting & advisory across Vietnam since 2006."
-                : "Công ty dịch vụ chuyên nghiệp độc lập — kiểm toán, thuế, kế toán & tư vấn trên phạm vi cả nước từ năm 2006."}
-            </p>
+            <div className="hero-subtitle">
+              {lang === "en" ? (
+                <>
+                  <p>FINE was incorporated as a limited liability professional services firm providing auditing, accounting, taxation and financial advisory services to economic organizations across all sectors on a national scale.</p>
+                  <p>Our mission is to provide trusted, best-in-class financial solutions that enable clients to make informed decisions, drive sustainable growth, and generate enduring value — guided by our three core values: <span className="values-underline">Integrity</span> · <span className="values-underline">Fortunate</span> · <span className="values-underline">Everlasting</span>.</p>
+                </>
+              ) : (
+                <>
+                  <p>FINE được thành lập là công ty dịch vụ chuyên nghiệp trách nhiệm hữu hạn, cung cấp dịch vụ kiểm toán, kế toán, tư vấn thuế và tư vấn tài chính cho các tổ chức kinh tế thuộc mọi thành phần trên phạm vi cả nước.</p>
+                  <p>Sứ mệnh của chúng tôi là cung cấp các giải pháp tài chính đáng tin cậy và tốt đẹp nhất, giúp khách hàng ra quyết định đúng đắn, phát triển bền vững và tạo ra giá trị lâu dài — dẫn lối bởi ba giá trị cốt lõi: <span className="values-underline">Chính trực</span> · <span className="values-underline">Thịnh vượng</span> · <span className="values-underline">Trường tồn</span>.</p>
+                </>
+              )}
+            </div>
             <div className="hero-cta-row">
               <a href="our-services.html" className="btn primary">
                 <span>{lang === "en" ? "Our services" : "Dịch vụ"}</span>
@@ -66,67 +74,8 @@ function Hero({ lang }) {
             </div>
           </div>
 
-          <aside className="hero-img-box" aria-label="FINE values">
-            <span className="corner-tag">FINE / 2026</span>
-            <div>
-              <div className="seal">FINE<span>.</span></div>
-              <div className="est">Established · Ho Chi Minh City · 2006</div>
-            </div>
-            <ul className="values-list">
-              {VALUES.map(v => (
-                <li key={v.word}>
-                  <span className="initial">{v.initial}</span>
-                  <span className="word">
-                    {lang === "en" ? v.word : v.vn}
-                    <small>{lang === "en" ? v.vn : v.word}</small>
-                  </span>
-                  <span className="dot"></span>
-                </li>
-              ))}
-            </ul>
-          </aside>
         </div>
 
-        <div className="dots-strip" aria-hidden="true"></div>
-
-        <div className="hero-body">
-          <div className="hero-summary-head">
-            {lang === "en" ? "Executive summary" : "Tổng quan"}
-          </div>
-          <div className="summary-callout">
-          {lang === "en" ? (
-            <>
-              <p>
-                <span className="orange">FINE Auditing Limited Liability Company ("FINE")</span> is
-                an independent professional services firm providing{" "}
-                <span className="orange">auditing, accounting, taxation and financial advisory</span>{" "}
-                services to economic organizations across all sectors on a national scale.
-              </p>
-              <p>
-                Our mission is to provide trusted, best-in-class financial solutions that enable
-                clients to make informed decisions, drive sustainable growth, and generate enduring
-                value — guided by our three core values:{" "}
-                <span className="orange">Integrity · Fortunate · Everlasting</span>.
-              </p>
-            </>
-          ) : (
-            <>
-              <p>
-                <span className="orange">Công ty TNHH Kiểm toán FINE ("FINE")</span> là công ty
-                dịch vụ chuyên nghiệp độc lập, chuyên cung cấp dịch vụ{" "}
-                <span className="orange">kiểm toán, kế toán, tư vấn thuế và tư vấn tài chính</span>{" "}
-                cho các tổ chức kinh tế thuộc mọi thành phần trên phạm vi cả nước.
-              </p>
-              <p>
-                Sứ mệnh của chúng tôi là cung cấp các giải pháp tài chính đáng tin cậy và tốt đẹp
-                nhất, giúp khách hàng ra quyết định đúng đắn, phát triển bền vững và tạo ra giá trị
-                lâu dài — dẫn lối bởi ba giá trị cốt lõi:{" "}
-                <span className="orange">Chính trực · Thịnh vượng · Trường tồn</span>.
-              </p>
-            </>
-          )}
-          </div>
-        </div>
       </div>
     </section>
   );
@@ -232,20 +181,12 @@ function WhatWeCanDo({ lang, withCta = true }) {
   );
 }
 
-function ClientsTeaser({ lang, limit = 12 }) {
-  const visible = CLIENTS.slice(0, limit);
+function ClientsTeaser({ lang }) {
   return (
     <section className="clients-teaser" data-screen-label="Clients teaser">
       <div className="wrap">
-        <SectionHead
-          wide
-          title={lang === "en" ? "Trusted by 120+ corporates" : "Đối tác tin cậy của 120+ doanh nghiệp"}
-          lead={lang === "en"
-            ? "From multinationals and family offices to NGOs and listed groups — a snapshot of who we serve."
-            : "Từ tập đoàn đa quốc gia, văn phòng gia đình, đến tổ chức phi chính phủ và công ty niêm yết."}
-        />
         <div className="clients-grid reveal">
-          {visible.map(c => (
+          {CLIENTS.map(c => (
             <a
               className="client-cell"
               key={c.name}
@@ -268,12 +209,12 @@ function WhatWeCanDoCards({ lang }) {
   // Home-page variant: 6 simple cards (image + title + short blurb +
   // Read more link to Our Services page). Mirrors hqco.com.vn layout.
   const IMAGES = {
-    "01": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80&auto=format&fit=crop",
-    "02": "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=1200&q=80&auto=format&fit=crop",
-    "03": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&q=80&auto=format&fit=crop",
-    "04": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80&auto=format&fit=crop",
-    "05": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&q=80&auto=format&fit=crop",
-    "06": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80&auto=format&fit=crop",
+    "01": "assets/site/svc-audit.jpg",
+    "02": "assets/site/svc-tax.jpg",
+    "03": "assets/site/svc-accounting.jpg",
+    "04": "assets/site/svc-payroll.jpg",
+    "05": "assets/site/svc-business-setup.jpg",
+    "06": "assets/site/svc-ma.jpg",
   };
   return (
     <section className="core-services home-svc-cards" data-screen-label="What We Can Do">
@@ -330,7 +271,6 @@ function Home({ lang }) {
   return (
     <>
       <Hero lang={lang} />
-      <StatsBand lang={lang} />
       <WhatWeCanDoCards lang={lang} />
       <ClientsTeaser lang={lang} />
     </>
@@ -376,19 +316,21 @@ function AboutBody({ lang }) {
             ) : (
               <>
                 <p>
-                  <span className="orange">FINE</span> được thành lập dưới hình thức công ty trách
-                  nhiệm hữu hạn, chuyên cung cấp dịch vụ kiểm toán, kế toán, tư vấn thuế và tư vấn
-                  tài chính cho các tổ chức kinh tế thuộc mọi thành phần trên{" "}
-                  <span className="orange">phạm vi cả nước</span>.
+                  <span className="orange">Công ty TNHH Kiểm toán FINE</span> được thành lập dưới
+                  hình thức công ty trách nhiệm hữu hạn, chuyên cung cấp dịch vụ kiểm toán, kế toán,
+                  tư vấn thuế và tư vấn tài chính cho các tổ chức kinh tế thuộc mọi thành phần.
+                </p>
+                <p>
+                  Với những hiểu biết chuyên môn sâu sắc và cách tiếp cận dựa trên{" "}
+                  <span className="orange">sự chính trực</span>, FINE không chỉ cung cấp dịch vụ mà
+                  còn cam kết trở thành đối tác chiến lược đáng tin cậy cho các khách hàng.
                 </p>
                 <p>
                   Sứ mệnh của chúng tôi là cung cấp các giải pháp tài chính đáng tin cậy và tốt đẹp
-                  nhất, giúp khách hàng ra quyết định đúng đắn, phát triển bền vững và tạo ra giá
-                  trị lâu dài.
-                </p>
-                <p>
-                  FINE khác biệt không chỉ vì khả năng chuyên môn mà còn vì sự cam kết coi vấn đề
-                  của khách hàng là của chính mình.
+                  nhất, giúp khách hàng ra quyết định đúng đắn, phát triển bền vững và tạo ra giá trị
+                  lâu dài — dẫn lối bởi{" "}
+                  <span className="orange">ba giá trị cốt lõi</span>: Chính trực · Thịnh vượng ·
+                  Trường tồn.
                 </p>
               </>
             )}
@@ -396,7 +338,6 @@ function AboutBody({ lang }) {
               {VALUES.map(v => (
                 <div className="value-cell" key={v.word}>
                   <div className="w">{lang === "en" ? v.word : v.vn}</div>
-                  <div className="vn">{lang === "en" ? v.vn : v.word}</div>
                   <div className="desc">{lang === "en" ? v.blurb : v.blurb_vn}</div>
                 </div>
               ))}
@@ -419,7 +360,6 @@ function About({ lang }) {
           : "Thành lập năm 2006 tại Thành phố Hồ Chí Minh. Dịch vụ kiểm toán, thuế, kế toán và tư vấn trên cả nước."}
       />
       <AboutBody lang={lang} />
-      <StatsBand lang={lang} />
     </>
   );
 }
@@ -478,7 +418,6 @@ function TeamBody({ lang }) {
               <h3>{lang === "en" ? TEAM[sel].name : TEAM[sel].name_vn}</h3>
               <div className="quals">{TEAM[sel].quals}</div>
               <p>{lang === "en" ? TEAM[sel].bio : TEAM[sel].bio_vn}</p>
-              <p className="vn">{lang === "en" ? TEAM[sel].bio_vn : TEAM[sel].bio}</p>
               <div className="contact-row">
                 <div>
                   <div className="lbl">{lang === "en" ? "Experience" : "Kinh nghiệm"}</div>
@@ -609,12 +548,12 @@ function ServicesDetail({ lang }) {
   // Thematic background photos per service number (Unsplash, free to use).
   // Swap any value here for your own brand photography.
   const IMAGES = {
-    "01": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1600&q=80&auto=format&fit=crop", // audit · charts + hand
-    "02": "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=1600&q=80&auto=format&fit=crop", // tax · calculator + forms
-    "03": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1600&q=80&auto=format&fit=crop", // accountancy · ledger
-    "04": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1600&q=80&auto=format&fit=crop", // payroll · paperwork desk
-    "05": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1600&q=80&auto=format&fit=crop", // business set-up · handshake
-    "06": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1600&q=80&auto=format&fit=crop", // M&A · meeting / boardroom
+    "01": "assets/site/svc-audit.jpg", // audit
+    "02": "assets/site/svc-tax.jpg", // tax
+    "03": "assets/site/svc-accounting.jpg", // accountancy
+    "04": "assets/site/svc-payroll.jpg", // payroll
+    "05": "assets/site/svc-business-setup.jpg", // business set-up
+    "06": "assets/site/svc-ma.jpg", // M&A
   };
 
   // Read which service to show from URL hash (#svc-NN), default to first.
@@ -680,9 +619,6 @@ function ServicesDetail({ lang }) {
               )}
               <div className="sd-hero-band">
                 <h1>{lang === "en" ? s.title : s.title_vn}</h1>
-                <div className="sd-hero-band-vn">
-                  {lang === "en" ? s.title_vn : s.title}
-                </div>
               </div>
             </div>
 
@@ -690,8 +626,11 @@ function ServicesDetail({ lang }) {
 
             <div className="sd-body">
               <p className="sd-lead">{lang === "en" ? s.short : s.short_vn}</p>
+              {(lang === "en" ? s.overview : s.overview_vn) && (
+                <p className="sd-overview">{lang === "en" ? s.overview : s.overview_vn}</p>
+              )}
               <p className="sd-intro">
-                {lang === "en" ? "We can work on situations involving:" : "Chúng tôi đồng hành cùng các nhu cầu sau:"}
+                {lang === "en" ? "We can support you with:" : "Chúng tôi có thể hỗ trợ Quý khách trong các lĩnh vực sau:"}
               </p>
               <ul className="sd-bullets">
                 {(lang === "en" ? s.bullets : s.bullets_vn).map(b => <li key={b}>{b}</li>)}

@@ -17,7 +17,7 @@ const VALUES = [
     blurb:
       "Integrity is the foundation of our professional conduct. We uphold the highest ethical standards in every engagement, fostering trust and confidence among our clients and stakeholders.",
     blurb_vn:
-      "Chúng tôi đề cao tính chính trực như giá trị cốt lõi nền tảng của nghề kiểm toán, làm cơ sở xây dựng niềm tin và sự tín nhiệm từ khách hàng và các bên liên quan.",
+      "Chính trực là nền tảng cốt lõi định hình bản sắc nghề nghiệp của FINE. Chúng tôi duy trì các tiêu chuẩn đạo đức cao nhất trong từng dịch vụ cung cấp, qua đó xây dựng và củng cố niềm tin của khách hàng cũng như các bên liên quan.",
   },
   {
     word: "Fortunate",
@@ -26,7 +26,7 @@ const VALUES = [
     blurb:
       "We transform financial data into meaningful insights, empowering clients to identify opportunities, manage risks, and achieve sustainable growth.",
     blurb_vn:
-      "Chuyển hóa dữ liệu tài chính thành tăng trưởng bền vững cho khách hàng và các bên liên quan.",
+      "Chúng tôi chuyển hóa dữ liệu tài chính thành những hiểu biết có giá trị, giúp khách hàng nhận diện cơ hội, kiểm soát rủi ro và tạo ra động lực tăng trưởng bền vững.",
   },
   {
     word: "Everlasting",
@@ -35,7 +35,7 @@ const VALUES = [
     blurb:
       "FINE partners with clients throughout the business lifecycle, focusing on long-term solutions that ensure stability, resilience, and enduring success.",
     blurb_vn:
-      "Đồng hành cùng khách hàng qua mọi chu kỳ kinh doanh — bền vững, lâu dài.",
+      "FINE đồng hành cùng khách hàng trong suốt vòng đời kinh doanh, hướng đến các giải pháp dài hạn và giá trị bền vững, đảm bảo sự phát triển ổn định và lâu dài cho khách hàng.",
   },
 ];
 
@@ -46,22 +46,30 @@ const SERVICES = [
     title_vn: "Kiểm toán & Đảm bảo",
     tag: "Audit",
     short:
-      "Comprehensive assurance services for improved accuracy and sustainable financial outcomes.",
+      "Our audit and assurance expertise helps organizations strengthen transparency, improve reporting reliability and support informed business decisions.",
     short_vn:
-      "Cung cấp các dịch vụ bảo đảm hoàn chỉnh — cải thiện tính chính xác và sự bền vững tài chính.",
+      "Dịch vụ kiểm toán và đảm bảo của chúng tôi hỗ trợ doanh nghiệp nâng cao tính minh bạch, cải thiện độ tin cậy của báo cáo và thúc đẩy các quyết định kinh doanh dựa trên cơ sở thông tin vững chắc.",
+    overview:
+      "Reliable financial information is fundamental to sustainable business growth. FINE provides comprehensive audit and assurance services designed to enhance confidence in financial reporting, strengthen governance and improve operational effectiveness. Our professionals combine technical excellence with industry insight to deliver practical recommendations beyond compliance requirements.",
+    overview_vn:
+      "Thông tin tài chính đáng tin cậy là nền tảng cốt lõi cho sự tăng trưởng bền vững của doanh nghiệp. FINE cung cấp các dịch vụ kiểm toán và đảm bảo toàn diện, được thiết kế nhằm củng cố niềm tin vào báo cáo tài chính, nâng cao chất lượng quản trị và cải thiện hiệu quả hoạt động. Đội ngũ chuyên gia của chúng tôi kết hợp năng lực chuyên môn sâu rộng với hiểu biết ngành, mang đến các khuyến nghị mang tính thực tiễn, vượt trên yêu cầu tuân thủ.",
     bullets: [
-      "Statutory financial audit (VAS / IFRS)",
-      "Group reporting packages",
-      "Due diligence for M&A",
-      "Internal audit & IC review",
-      "Construction & project audits",
+      "Statutory financial statement audits in accordance with Vietnamese regulations and applicable accounting standards",
+      "Group reporting audits and reporting packages for multinational corporations",
+      "Financial statement review engagements and agreed-upon procedures engagements",
+      "Special purpose audits",
+      "Financial due diligence reviews for investment and transaction purposes",
+      "Internal audit and internal control system assessment",
+      "Construction completion audits and capital expenditure audits",
     ],
     bullets_vn: [
-      "Kiểm toán BCTC theo VAS/IFRS",
-      "Báo cáo hợp nhất tập đoàn",
-      "Thẩm định tài chính (DD) cho M&A",
-      "Kiểm toán nội bộ & kiểm soát nội bộ",
-      "Kiểm toán xây dựng cơ bản",
+      "Kiểm toán báo cáo tài chính theo quy định pháp luật Việt Nam và các chuẩn mực kế toán hiện hành",
+      "Kiểm toán báo cáo tập đoàn và cung cấp các thông tin phục vụ cho báo cáo kiểm toán của tập đoàn",
+      "Dịch vụ soát xét báo cáo tài chính và thực hiện các thủ tục theo thỏa thuận",
+      "Kiểm toán cho mục đích đặc biệt",
+      "Thẩm định tài chính phục vụ mục đích đầu tư và giao dịch",
+      "Kiểm toán nội bộ và đánh giá hệ thống kiểm soát nội bộ",
+      "Kiểm toán quyết toán công trình xây dựng và kiểm toán chi phí đầu tư",
     ],
   },
   {
@@ -70,22 +78,28 @@ const SERVICES = [
     title_vn: "Tư vấn thuế",
     tag: "Tax",
     short:
-      "Addressing complex tax matters to deliver optimal tax outcomes.",
+      "Our tax professionals help organizations manage tax risks, maintain compliance and develop efficient tax strategies in an increasingly complex regulatory environment.",
     short_vn:
-      "Xử lý các vấn đề thuế phức tạp, mang lại hiệu quả tối ưu thuế.",
+      "Đội ngũ chuyên gia thuế của chúng tôi hỗ trợ doanh nghiệp quản lý rủi ro thuế, đảm bảo tuân thủ quy định và xây dựng các chiến lược thuế hiệu quả trong bối cảnh môi trường pháp lý ngày càng phức tạp.",
+    overview:
+      "Tax should be viewed not merely as a compliance obligation but as an integral element of business strategy. FINE supports organizations in addressing domestic and international tax matters through practical and commercially focused advice.",
+    overview_vn:
+      "Thuế không nên chỉ được xem là nghĩa vụ tuân thủ mà còn là một yếu tố không thể thiếu trong chiến lược kinh doanh. FINE hỗ trợ doanh nghiệp xử lý các vấn đề thuế trong nước và quốc tế thông qua tư vấn thực tiễn và định hướng thương mại.",
     bullets: [
-      "Tax compliance: VAT, CIT, PIT, FCT",
-      "Tax health-check & optimisation",
-      "Transfer pricing documentation",
-      "Tax authority liaison",
-      "Expatriate PIT advisory",
+      "Corporate Income Tax (CIT), Value Added Tax (VAT), Personal Income Tax (PIT), Foreign Contractor Tax (FCT) advisory",
+      "Tax compliance, tax filing and tax reporting services",
+      "Tax health checks and tax risk assessments",
+      "Assistance with tax inspections and tax audits",
+      "Transfer pricing advisory and preparation of transfer pricing documentation",
+      "Advisory on Global Minimum Tax (Pillar Two)",
     ],
     bullets_vn: [
-      "Kê khai & quyết toán thuế",
-      "Rà soát & tối ưu thuế",
-      "Hồ sơ giao dịch liên kết",
-      "Làm việc cơ quan thuế",
-      "Tư vấn thuế TNCN cho người nước ngoài",
+      "Tư vấn thuế Thu nhập Doanh nghiệp (CIT), Thuế Giá trị Gia tăng (VAT), Thuế Thu nhập Cá nhân (PIT) và Thuế Nhà thầu nước ngoài (FCT)",
+      "Dịch vụ kê khai, nộp và lập báo cáo thuế",
+      "Rà soát hồ sơ thuế và đánh giá rủi ro thuế",
+      "Hỗ trợ trong quá trình thanh tra, kiểm tra và kiểm toán thuế",
+      "Tư vấn giao dịch liên kết và lập hồ sơ xác định giá giao dịch liên kết",
+      "Tư vấn áp dụng Thuế Tối thiểu Toàn cầu",
     ],
   },
   {
@@ -94,22 +108,32 @@ const SERVICES = [
     title_vn: "Kế toán",
     tag: "Accounting",
     short:
-      "Providing the clean numbers, on time — aim to build a finance function you can rely on.",
+      "Our accounting solutions help businesses build reliable financial information systems and support effective management decision-making.",
     short_vn:
-      "Số liệu tài chính rõ ràng, báo cáo đúng hạn — xây dựng bộ phận tài chính đáng tin cậy.",
+      "Các giải pháp kế toán của chúng tôi hỗ trợ doanh nghiệp xây dựng hệ thống thông tin tài chính đáng tin cậy, đồng thời nâng cao hiệu quả trong quá trình ra quyết định quản trị.",
+    overview:
+      "Organizations increasingly require accurate and timely financial information to support operational and strategic decisions. FINE assists clients in developing robust accounting frameworks and maintaining compliance with evolving reporting requirements.",
+    overview_vn:
+      "Trong bối cảnh doanh nghiệp ngày càng đòi hỏi thông tin tài chính chính xác và kịp thời để phục vụ các quyết định vận hành và chiến lược, FINE hỗ trợ khách hàng xây dựng hệ thống kế toán vững chắc và đảm bảo tuân thủ các yêu cầu báo cáo ngày càng phát triển.",
     bullets: [
-      "Full-service bookkeeping",
-      "Accounting system set-up & migration",
-      "Monthly / quarterly / annual reporting",
-      "Statutory financial statements",
-      "Management reporting dashboards",
+      "Accounting outsourcing and bookkeeping services",
+      "Design and implementation of accounting systems and chart of accounts",
+      "Monthly, quarterly and annual financial reporting",
+      "Management reporting and financial analysis",
+      "Conversion between VAS and IFRS reporting requirements",
+      "Accounting policy manuals and process documentation",
+      "Accounting advisory and technical consultations",
+      "Training and support for internal accounting teams",
     ],
     bullets_vn: [
-      "Dịch vụ kế toán trọn gói",
-      "Thiết lập & chuyển đổi hệ thống kế toán",
-      "Lập báo cáo tháng/quý/năm",
-      "Lập báo cáo tài chính năm",
-      "Báo cáo quản trị theo yêu cầu",
+      "Dịch vụ kế toán thuê ngoài và ghi sổ kế toán",
+      "Thiết kế và triển khai hệ thống kế toán và hệ thống tài khoản",
+      "Lập báo cáo tài chính định kỳ (tháng, quý, năm)",
+      "Lập báo cáo quản trị và phân tích tài chính",
+      "Chuyển đổi báo cáo tài chính từ VAS sang IFRS",
+      "Xây dựng sổ tay chính sách kế toán và tài liệu quy trình",
+      "Tư vấn kế toán và hỗ trợ kỹ thuật chuyên sâu",
+      "Đào tạo và hỗ trợ đội ngũ kế toán nội bộ",
     ],
   },
   {
@@ -118,22 +142,32 @@ const SERVICES = [
     title_vn: "Tiền lương",
     tag: "Payroll",
     short:
-      "Confidential, accurate and compliant — payroll the way it should be.",
+      "Our payroll professionals help organizations maintain efficient payroll administration and workforce compliance.",
     short_vn:
-      "Bảo mật, chính xác, tuân thủ — giải pháp tiền lương chuyên nghiệp.",
+      "Đội ngũ chuyên gia của chúng tôi hỗ trợ doanh nghiệp duy trì hệ thống quản lý tiền lương hiệu quả, đồng thời đảm bảo tuân thủ đầy đủ các quy định pháp luật về lao động.",
+    overview:
+      "Managing payroll involves more than salary calculations. It requires compliance with labor regulations, social insurance obligations and changing legal requirements. FINE delivers payroll services with confidentiality, accuracy and operational efficiency.",
+    overview_vn:
+      "Quản lý tiền lương không chỉ dừng lại ở việc tính toán thu nhập. Hoạt động này đòi hỏi phải tuân thủ đầy đủ các quy định pháp luật về lao động, nghĩa vụ bảo hiểm và các yêu cầu pháp lý thường xuyên thay đổi. FINE cung cấp dịch vụ tiền lương với tiêu chuẩn cao về bảo mật, độ chính xác và hiệu quả vận hành.",
     bullets: [
-      "Monthly payroll computation",
-      "Social & health insurance filing",
-      "PIT finalisation & reporting",
-      "Labour contract administration",
-      "Payroll compliance advisory",
+      "Payroll processing for local and expatriate employees",
+      "Monthly salary calculations",
+      "Personal Income Tax calculations and declarations",
+      "Social insurance, health insurance and unemployment insurance filings",
+      "Registration procedures with social insurance authorities",
+      "Labor law and payroll compliance advisory",
+      "Employment contract and employee-related support",
+      "Updates on regulatory changes and compliance requirements",
     ],
     bullets_vn: [
+      "Xử lý và quản lý bảng lương cho nhân sự trong nước và người lao động nước ngoài",
       "Tính lương hàng tháng",
-      "Khai báo BHXH · BHYT · BHTN",
-      "Quyết toán thuế TNCN",
-      "Quản lý hợp đồng lao động",
-      "Tư vấn tuân thủ lao động",
+      "Tính toán và kê khai thuế Thu nhập Cá nhân (PIT)",
+      "Khai báo bảo hiểm xã hội, bảo hiểm y tế và bảo hiểm thất nghiệp",
+      "Thực hiện thủ tục đăng ký với cơ quan bảo hiểm xã hội",
+      "Tư vấn tuân thủ pháp luật lao động và quy định về tiền lương",
+      "Hỗ trợ về hợp đồng lao động và các vấn đề liên quan đến người lao động",
+      "Cập nhật kịp thời các thay đổi về quy định pháp lý và yêu cầu tuân thủ",
     ],
   },
   {
@@ -142,22 +176,32 @@ const SERVICES = [
     title_vn: "Thành lập doanh nghiệp",
     tag: "Set-up",
     short:
-      "We smooth your entry into Vietnam — from first filing to first month-end.",
+      "Our business establishment solutions help investors build a strong foundation from market entry through operational readiness.",
     short_vn:
-      "Thuận lợi, hiệu quả, tuân thủ — đồng hành cùng bạn gia nhập thị trường Việt Nam.",
+      "Các giải pháp thành lập doanh nghiệp của chúng tôi hỗ trợ nhà đầu tư xây dựng nền tảng vững chắc, từ giai đoạn gia nhập thị trường đến khi sẵn sàng vận hành.",
+    overview:
+      "Establishing a business requires navigating legal, regulatory and operational considerations. FINE supports domestic and foreign investors throughout the business establishment process.",
+    overview_vn:
+      "Việc thành lập doanh nghiệp đòi hỏi phải quản lý hiệu quả các yêu cầu về pháp lý, tuân thủ và vận hành. FINE đồng hành cùng cả nhà đầu tư trong nước và quốc tế trong suốt quá trình thành lập doanh nghiệp, từ giai đoạn chuẩn bị đến khi chính thức đi vào hoạt động.",
     bullets: [
-      "Entity & licence structuring",
-      "FDI entry advisory",
-      "Representative office set-up",
-      "Partnership & JV registration",
-      "Post-set-up tax & accounting",
+      "Business structure and market entry advisory",
+      "Incorporation of Limited Liability Companies and Joint Stock Companies",
+      "Registration of representative offices and branches",
+      "Foreign investment licensing advisory",
+      "Corporate governance and organizational structuring",
+      "Post-licensing compliance support",
+      "Initial accounting and tax registration procedures",
+      "Legal and operational setup assistance",
     ],
     bullets_vn: [
-      "Cấu trúc pháp lý & giấy phép",
-      "Tư vấn đầu tư nước ngoài",
-      "Thành lập văn phòng đại diện",
-      "Đăng ký thành lập hợp danh & liên doanh",
-      "Kế toán · thuế sau thành lập",
+      "Tư vấn cấu trúc doanh nghiệp và chiến lược gia nhập thị trường",
+      "Thành lập công ty trách nhiệm hữu hạn và công ty cổ phần",
+      "Đăng ký thành lập văn phòng đại diện và chi nhánh",
+      "Tư vấn và hỗ trợ thủ tục cấp phép đầu tư nước ngoài",
+      "Tư vấn quản trị doanh nghiệp và cơ cấu tổ chức",
+      "Hỗ trợ tuân thủ sau khi được cấp phép",
+      "Thực hiện các thủ tục đăng ký kế toán và thuế ban đầu",
+      "Hỗ trợ thiết lập khung pháp lý và vận hành ban đầu của doanh nghiệp",
     ],
   },
   {
@@ -166,22 +210,30 @@ const SERVICES = [
     title_vn: "Tư vấn M&A",
     tag: "M&A",
     short:
-      "Ideas that create enduring value — from first meeting to day-one integration.",
+      "Our integrated M&A advisory services help clients execute transactions effectively and maximize long-term value creation.",
     short_vn:
-      "Ý tưởng tạo giá trị bền vững — từ khởi điểm giao dịch đến tích hợp hậu sáp nhập.",
+      "Dịch vụ tư vấn M&A tích hợp của chúng tôi hỗ trợ khách hàng triển khai giao dịch một cách hiệu quả, đồng thời tối đa hóa giá trị tạo ra trong dài hạn.",
+    overview:
+      "From strategic evaluation through post-deal integration, FINE provides practical transaction advisory services tailored to each client's objectives. We support both buy-side and sell-side transactions across multiple industries.",
+    overview_vn:
+      "Từ giai đoạn đánh giá chiến lược đến tích hợp sau giao dịch, FINE cung cấp các giải pháp tư vấn giao dịch mang tính thực tiễn, được thiết kế phù hợp với mục tiêu cụ thể của từng khách hàng. Chúng tôi hỗ trợ cả bên mua và bên bán trong các giao dịch thuộc nhiều lĩnh vực khác nhau.",
     bullets: [
-      "Buy-side / sell-side advisory",
-      "Financial & tax due diligence",
-      "Valuation & financial modelling",
-      "Deal structuring & negotiation",
-      "Post-merger integration",
+      "Buy-side and sell-side transaction advisory",
+      "Financial due diligence",
+      "Business valuation and financial modeling",
+      "Acquisition and takeover support",
+      "Mergers, de-mergers and restructuring",
+      "Capital restructuring and divestment advisory",
+      "Post-merger integration support",
     ],
     bullets_vn: [
-      "Tư vấn bên mua / bên bán",
-      "Thẩm định tài chính & thuế",
-      "Định giá & mô hình tài chính",
-      "Cấu trúc giao dịch & đàm phán",
-      "Tích hợp hậu sáp nhập",
+      "Tư vấn giao dịch cho bên mua và bên bán",
+      "Thẩm định tài chính",
+      "Định giá doanh nghiệp và xây dựng mô hình tài chính",
+      "Hỗ trợ thực hiện các giao dịch mua lại và thâu tóm doanh nghiệp",
+      "Tư vấn sáp nhập, chia tách và tái cấu trúc doanh nghiệp",
+      "Tư vấn tái cấu trúc vốn và thoái vốn",
+      "Hỗ trợ tích hợp sau sáp nhập",
     ],
   },
 ];
@@ -286,30 +338,30 @@ const TEAM = [
 ];
 
 const CLIENTS = [
-  { name: "Gunzetal", logo: "assets/clients/Gunzetal.jpg", sector: "Manufacturing", url: "http://www.gunzetal.com/" },
-  { name: "Mass", logo: "assets/clients/Mass.jpg", sector: "Manufacturing", url: "http://www.mass.co.th/home" },
-  { name: "Cotecna", logo: "assets/clients/Cotecna.jpg", sector: "Inspection", url: "https://www.cotecna.com/en" },
-  { name: "Glandcore", logo: "assets/clients/Glandcore.jpg", sector: "Trading", url: "https://glandcore.com.vn/" },
-  { name: "Mentfield", logo: "assets/clients/Mentfield.jpg", sector: "Logistics", url: "http://www.mentfield.com/" },
-  { name: "ezFly", logo: "assets/clients/GoHappy.jpg", sector: "Travel", url: "https://ezfly.com/" },
-  { name: "EMM", logo: "assets/clients/Emm.jpg", sector: "Industrial", url: "https://elektrim.com.vn/" },
-  { name: "Nankai", logo: "assets/clients/Nankai.jpg", sector: "Industrial", url: "https://www.aglc.co.jp/" },
-  { name: "Lautan", logo: "assets/clients/Lautan.jpg", sector: "Trading", url: "https://lautan-luas.com.vn/vi/" },
-  { name: "Caritas Vietnam", logo: "assets/clients/Caritas.jpg", sector: "NGO", url: "https://caritasvietnam.org/" },
-  { name: "Việt Trung", logo: "assets/clients/VietTrung.jpg", sector: "Manufacturing", url: "https://viettrung.com/" },
-  { name: "Bita's", logo: "assets/clients/Bitas.jpg", sector: "Footwear", url: "https://bitas.com.vn/" },
-  { name: "TVE / Tri Việt", logo: "assets/clients/TriViet.jpg", sector: "Services", url: "https://trivietco.vn/" },
-  { name: "Fillon Technologies", logo: "assets/clients/Fillon.jpg", sector: "Technology", url: "https://www.fillontech.com/en/corporate/homepage/" },
-  { name: "Daco Logistics", logo: "assets/clients/Daco.jpg", sector: "Logistics", url: "https://dacologistics.com/vi/home/" },
   { name: "Kido Group", logo: "assets/clients/Kido.jpg", sector: "F&B", url: "https://www.kdc.vn/" },
+  { name: "Glandcore", logo: "assets/clients/Glandcore.jpg", sector: "Trading", url: "https://glandcore.com.vn/" },
+  { name: "Lautan", logo: "assets/clients/Lautan.jpg", sector: "Trading", url: "https://lautan-luas.com.vn/vi/" },
   { name: "Nipon", logo: "assets/clients/Nipon.jpg", sector: "Technology", url: "https://www.niponvietnam.com.vn/" },
-  { name: "Tong Hong Tannery", logo: "assets/clients/TongHong.jpg", sector: "Leather", url: "http://www.tong-hong.com/" },
-  { name: "DreamChef", logo: "assets/clients/Dreamchef.jpg", sector: "F&B", url: "http://www.dreamchef.kr/vn/Vietnam" },
-  { name: "Tigermed", logo: "assets/clients/Tigermed.jpg", sector: "Healthcare", url: "https://tigermedgrp.com/en/homepage" },
-  { name: "Gia Khải Investment", logo: "assets/clients/GiaKhai.jpg", sector: "Investment", url: "https://diaocgiakhai.vn/" },
+  { name: "EMM", logo: "assets/clients/Emm.jpg", sector: "Industrial", url: "https://elektrim.com.vn/" },
+  { name: "Tongwei Vietnam", logo: "assets/clients/Tongwei.png", sector: "Aquaculture", url: "https://www.tongwei.com/" },
+  { name: "Mentfield", logo: "assets/clients/Mentfield.jpg", sector: "Logistics", url: "http://www.mentfield.com/" },
+  { name: "Daco Logistics", logo: "assets/clients/Daco.jpg", sector: "Logistics", url: "https://dacologistics.com/vi/home/" },
   { name: "SDB", logo: "assets/clients/SDB.jpg", sector: "Manufacturing", url: "https://www.savinodelbene.com/company/" },
+  { name: "Mass", logo: "assets/clients/Mass.jpg", sector: "Manufacturing", url: "http://www.mass.co.th/home" },
+  { name: "Nankai", logo: "assets/clients/Nankai.jpg", sector: "Industrial", url: "https://www.aglc.co.jp/" },
   { name: "MZST / Molvizadah", logo: "assets/clients/Molvizadah.jpg", sector: "Industrial", url: "https://www.molvizadahsons.com/" },
   { name: "Asama", logo: "assets/clients/Asama.jpg", sector: "Industrial", url: "https://asamabike.com/" },
+  { name: "Tong Hong Tannery", logo: "assets/clients/TongHong.jpg", sector: "Leather", url: "http://www.tong-hong.com/" },
+  { name: "Gunzetal", logo: "assets/clients/Gunzetal.jpg", sector: "Manufacturing", url: "http://www.gunzetal.com/" },
+  { name: "DreamChef", logo: "assets/clients/Dreamchef.jpg", sector: "F&B", url: "http://www.dreamchef.kr/vn/Vietnam" },
+  { name: "Việt Trung", logo: "assets/clients/VietTrung.jpg", sector: "Manufacturing", url: "https://viettrung.com/" },
+  { name: "Fillon Technologies", logo: "assets/clients/Fillon.jpg", sector: "Technology", url: "https://www.fillontech.com/en/corporate/homepage/" },
+  { name: "Tigermed", logo: "assets/clients/Tigermed.jpg", sector: "Healthcare", url: "https://tigermedgrp.com/en/homepage" },
+  { name: "Cotecna", logo: "assets/clients/Cotecna.jpg", sector: "Inspection", url: "https://www.cotecna.com/en" },
+  { name: "ezFly", logo: "assets/clients/GoHappy.jpg", sector: "Travel", url: "https://ezfly.com/" },
+  { name: "Gia Khải Investment", logo: "assets/clients/GiaKhai.jpg", sector: "Investment", url: "https://diaocgiakhai.vn/" },
+  { name: "Bita's", logo: "assets/clients/Bitas.jpg", sector: "Footwear", url: "https://bitas.com.vn/" },
+  { name: "Caritas Vietnam", logo: "assets/clients/Caritas.jpg", sector: "NGO", url: "https://caritasvietnam.org/" },
 ];
 
 const STATS = [
