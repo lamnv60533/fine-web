@@ -251,9 +251,9 @@ const TEAM = [
     email: "chauntm@fineaudit.vn",
     phone: "+84 909 692 900",
     bio:
-      "With over 17 years of experience in auditing, complemented by a solid foundation in accounting, tax, and finance, Ms. Chau has led numerous large-scale audit engagements for both local and international clients. She also advises foreign investors in navigating market entry and establishing operations in Vietnam.",
+      "With over 17 years of experience in auditing, complemented by a solid foundation in accounting, tax, and finance, Ms. Chau has led numerous large-scale audit engagements for both local and international clients. She also advises foreign investors in navigating market entry and establishing operations in Vietnam. With a dynamic and results-oriented approach, strong relationship management skills, and a firm commitment to integrity, she plays a key role in enhancing financial transparency and supporting clients' sustainable growth.",
     bio_vn:
-      "Với hơn 17 năm kinh nghiệm trong lĩnh vực kiểm toán, cùng nền tảng vững chắc về kế toán, thuế và tài chính, Bà Châu đã trực tiếp dẫn dắt nhiều dự án kiểm toán quy mô lớn cho các doanh nghiệp trong và ngoài nước.",
+      "Với hơn 17 năm kinh nghiệm trong lĩnh vực kiểm toán, cùng nền tảng vững chắc về kế toán, thuế và tài chính, Bà Châu đã trực tiếp dẫn dắt nhiều dự án kiểm toán quy mô lớn cho các doanh nghiệp trong và ngoài nước. Bà đồng thời hỗ trợ nhà đầu tư nước ngoài trong quá trình tiếp cận và triển khai hoạt động tại thị trường Việt Nam. Với tư duy linh hoạt, khả năng kết nối hiệu quả và đề cao tính chính trực, Bà góp phần giúp doanh nghiệp nâng cao minh bạch tài chính và định hướng phát triển bền vững.",
   },
   {
     name: "Do Thi Huong",
@@ -267,9 +267,9 @@ const TEAM = [
     email: "huongdt@fineaudit.vn",
     phone: "+84 91 785 1057",
     bio:
-      "With a strong professional foundation in accounting and auditing and over 20 years of experience, Ms. Huong is highly trusted by clients for audit, advisory, and specialized training services.",
+      "With a strong professional foundation in accounting and auditing and over 20 years of experience, Ms. Huong is highly trusted by clients for audit, advisory, and specialized training services. With her sharp analytical mindset and strong professional commitment, she consistently delivers effective solutions that enhance business value and support sustainable growth.",
     bio_vn:
-      "Nền tảng chuyên môn vững chắc về kế toán, kiểm toán cùng hơn 20 năm kinh nghiệm, Bà Hường được khách hàng tin tưởng trong các hoạt động kiểm toán, tư vấn và đào tạo chuyên sâu.",
+      "Nền tảng chuyên môn vững chắc về kế toán, kiểm toán cùng hơn 20 năm kinh nghiệm, Bà Hường được khách hàng tin tưởng trong các hoạt động kiểm toán, tư vấn và đào tạo chuyên sâu. Với tư duy phân tích sắc bén và cam kết chuyên nghiệp, Bà luôn mang đến các giải pháp hiệu quả, góp phần nâng cao giá trị và sự phát triển bền vững cho doanh nghiệp.",
   },
   {
     name: "Luong Quy Hien",
@@ -285,7 +285,7 @@ const TEAM = [
     bio:
       "With over 15 years of experience in auditing, Ms. Hien has been involved in numerous audit and advisory engagements for both domestic and international clients. With strong language skills, a clear analytical mindset, and a professional working style, she consistently supports clients in ensuring regulatory compliance and enhancing operational efficiency in Vietnam.",
     bio_vn:
-      "Với hơn 15 năm kinh nghiệm trong lĩnh vực kiểm toán, Bà Hiền đã tham gia nhiều hoạt động kiểm toán và tư vấn cho doanh nghiệp trong và ngoài nước.",
+      "Với kinh nghiệm hơn 15 năm trong lĩnh vực kiểm toán, Bà Hiền đã tham gia nhiều hoạt động kiểm toán và tư vấn cho doanh nghiệp trong và ngoài nước. Nhờ khả năng ngôn ngữ, tư duy phân tích rõ ràng và tác phong làm việc chuyên nghiệp, Bà Hiền luôn hỗ trợ khách hàng tuân thủ quy định và nâng cao hiệu quả hoạt động tại Việt Nam.",
   },
   {
     name: "Nguyen Le Hoang Minh",
@@ -299,9 +299,9 @@ const TEAM = [
     email: "minhnlh@fineaudit.vn",
     phone: "+84 6267 1168",
     bio:
-      "Mr. Minh has over 19 years of experience in corporate finance, financial advisory, tax and accounting advisory. His extensive experience affords him the ability to assist clients in maximizing tax benefits and minimizing clients' tax obligations.",
+      "Mr. Minh has over 19 years of experience in the profession of corporate finance, financial advisory, tax and accounting advisory. His extensive experience affords him the ability to assist clients in maximizing tax benefits and minimizing clients' tax obligations. He also concentrates on finance management and M&A processes.",
     bio_vn:
-      "Với hơn 19 năm kinh nghiệm trong lĩnh vực tài chính doanh nghiệp, tư vấn tài chính, tư vấn thuế và kế toán, Ông Minh đã đồng hành cùng nhiều doanh nghiệp trong việc tối ưu hiệu quả tài chính.",
+      "Với hơn 19 năm kinh nghiệm trong lĩnh vực tài chính doanh nghiệp, tư vấn tài chính, tư vấn thuế và kế toán, Ông Minh đã đồng hành cùng nhiều doanh nghiệp trong việc tối ưu hiệu quả tài chính. Nhờ nền tảng chuyên môn sâu rộng, Ông có khả năng hỗ trợ khách hàng tối đa hóa lợi ích thuế đồng thời giảm thiểu nghĩa vụ thuế một cách hợp pháp và hiệu quả.",
   },
   {
     name: "Le Trong Dai",
@@ -315,9 +315,9 @@ const TEAM = [
     email: "dailt@fineaudit.vn",
     phone: "+84 97 806 0306",
     bio:
-      "Mr. Dai has over 17 years of experience in accounting and tax advisory. He specializes in guiding clients on how to build and operate effective accounting systems, ensuring full compliance with tax regulations.",
+      "Mr. Dai has over 17 years of experience in accounting and tax advisory. He specializes in guiding clients on how to build and operate effective accounting systems, ensuring full compliance with tax regulations. He also provides expert advice to help clients minimize tax risks through practical and compliant solutions.",
     bio_vn:
-      "Ông Đãi có hơn 17 năm kinh nghiệm trong lĩnh vực kế toán và tư vấn thuế. Ông là chuyên gia định hướng cho khách hàng cách vận hành bộ máy kế toán hiệu quả.",
+      "Ông Đãi có hơn 17 năm kinh nghiệm trong lĩnh vực kế toán và tư vấn thuế. Ông là chuyên gia định hướng cho khách hàng cách vận hành bộ máy kế toán hiệu quả, giúp khách hàng tuân thủ các qui định về thuế và tư vấn khách hàng các biện pháp giảm thiểu rủi ro về thuế.",
   },
   {
     name: "Dang Tran Hung",
@@ -331,9 +331,9 @@ const TEAM = [
     email: "hungdt@fineaudit.vn",
     phone: "+84 978 377 255",
     bio:
-      "Mr. Hung has over 17 years of experience in financial services, with deep expertise in due diligence, strategic corporate finance, M&A, and financial restructuring. As a senior financial expert, he has successfully supported numerous clients in attracting funding and valuable investment opportunities.",
+      "Mr. Hung has over 17 years of experience in financial services, with deep expertise in due diligence, strategic corporate finance, M&A, and financial restructuring. As a senior financial expert, he has successfully supported numerous clients in attracting funding and valuable investment opportunities, contributing to their sustainable business growth.",
     bio_vn:
-      "Ông Hùng có hơn 17 năm kinh nghiệm trong lĩnh vực dịch vụ tài chính, với chuyên môn sâu về soát xét thẩm định, tài chính doanh nghiệp chiến lược, M&A, tái cấu trúc tài chính.",
+      "Ông Hùng có hơn 17 năm kinh nghiệm trong lĩnh vực dịch vụ tài chính, với chuyên môn sâu về soát xét thẩm định (due diligence), tài chính doanh nghiệp chiến lược, M&A, tái cấu trúc tài chính. Là chuyên gia tài chính cấp cao đã hỗ trợ rất nhiều khách hàng thu hút nguồn vốn và cơ hội đầu tư giá trị, góp phần thúc đẩy sự phát triển bền vững của doanh nghiệp.",
   },
 ];
 
