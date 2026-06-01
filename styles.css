@@ -128,9 +128,12 @@ section { padding: 8rem 0; position: relative; }
 }
 .drawer .brand-logo { height: 5.4rem; }
 
-.nav { display: flex; align-items: center; gap: 3rem; }
+.nav { display: flex; align-items: center; gap: 2.8rem; }
 .nav a {
-  font-size: 2.1rem; font-weight: 600;
+  font-size: 1.45rem; font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
   color: var(--gray);
   transition: color 0.2s ease;
   position: relative;
@@ -141,7 +144,7 @@ section { padding: 8rem 0; position: relative; }
 .nav a.active::after {
   content: "";
   position: absolute; left: 0; right: 0; bottom: -0.4rem;
-  height: 0.3rem;
+  height: 0.25rem;
   background: var(--orange);
 }
 
@@ -2174,6 +2177,10 @@ section { padding: 8rem 0; position: relative; }
 /* ---------- Responsive ---------- */
 @media (max-width: 1100px) {
   .hero-grid { grid-template-columns: 1fr; gap: 4rem; }
+  /* Collapse the desktop nav to the drawer earlier so the inline links
+     never crowd the logo / language toggle in the mid-width band. */
+  .nav { display: none; }
+  .menu-btn { display: inline-flex; align-items: center; gap: 0.8rem; font-size: 1.3rem; }
   .cards-grid-3 { grid-template-columns: repeat(2, 1fr); }
   .team-grid { grid-template-columns: repeat(3, 1fr); }
   .about-grid { grid-template-columns: 1fr; gap: 4rem; }
