@@ -62,16 +62,6 @@ function Hero({ lang }) {
                 </>
               )}
             </div>
-            <div className="hero-cta-row">
-              <a href="our-services.html" className="btn primary">
-                <span>{lang === "en" ? "Our services" : "Dịch vụ"}</span>
-                <span className="arrow">→</span>
-              </a>
-              <a href="contact.html" className="btn">
-                <span>{lang === "en" ? "Contact us" : "Liên hệ"}</span>
-                <span className="arrow">→</span>
-              </a>
-            </div>
           </div>
 
         </div>
@@ -287,7 +277,6 @@ function AboutBody({ lang }) {
           <div className="about-img">
             <div className="since">2006</div>
             <div className="stamp">
-              <div className="l1">{lang === "en" ? "Independent · Vietnam" : "Độc lập · Việt Nam"}</div>
               <div className="l2">FINE Auditing Limited Liability Company</div>
               <div className="l3">{lang === "en" ? "Audit · Tax · Accounting · Advisory" : "Kiểm toán · Thuế · Kế toán · Tư vấn"}</div>
             </div>
@@ -356,7 +345,7 @@ function About({ lang }) {
         eyebrow={lang === "en" ? "01 · About Us" : "01 · Về chúng tôi"}
         title={lang === "en" ? "An independent firm built on three core values." : "Công ty độc lập, xây trên ba giá trị cốt lõi."}
         lead={lang === "en"
-          ? "Founded 2006 in Ho Chi Minh City. Audit, tax, accounting and advisory across Vietnam."
+          ? "Since 2006 in Ho Chi Minh City. Audit, tax, accounting and advisory across Vietnam."
           : "Thành lập năm 2006 tại Thành phố Hồ Chí Minh. Dịch vụ kiểm toán, thuế, kế toán và tư vấn trên cả nước."}
       />
       <AboutBody lang={lang} />
@@ -379,7 +368,7 @@ function TeamBody({ lang }) {
         <SectionHead
           title={lang === "en" ? "Board of Management" : "Ban Giám đốc"}
           lead={lang === "en"
-            ? "Our clients work directly with partners who have practised in their fields for an average of over 17 years — actively involved in every engagement."
+            ? "Our clients work directly with partners who have practised in their fields for an average of over 17 years - actively involved in every engagement."
             : "Khách hàng của FINE luôn được tiếp cận trực tiếp với các Giám đốc có trên 17 năm kinh nghiệm chuyên môn, luôn trực tiếp tham gia từng dịch vụ."}
         />
         <div className="team-grid reveal">
@@ -655,7 +644,7 @@ function PartnersBody({ lang }) {
         <SectionHead title={lang === "en" ? "Our partners" : "Đối tác"} />
         <div className="partners-grid reveal">
           <a className="partner-card" href="https://www.hqco.com.vn/" target="_blank" rel="noopener">
-            <div className="logo-slot">H&amp;Q ADVISORY · MORISON GLOBAL</div>
+            <div className="logo-slot has-img"><img src="assets/site/Logo-Horizontal.svg" alt="H&Q Advisory · Morison Global" /></div>
             <h4>H&amp;Q Advisory</h4>
             <div className="role">{lang === "en" ? "Independent Member · Morison Global" : "Thành viên Độc lập · Morison Global"}</div>
             <p>
@@ -666,7 +655,7 @@ function PartnersBody({ lang }) {
             <span className="visit">Visit hqco.com.vn <span>→</span></span>
           </a>
           <a className="partner-card" href="#" onClick={(e) => e.preventDefault()}>
-            <div className="logo-slot">VIET &amp; CO · LEGAL PARTNER</div>
+            <div className="logo-slot has-img"><img src="assets/site/NewVietCo.png" alt="Viet & Co · Legal Partner" /></div>
             <h4>Viet &amp; Co</h4>
             <div className="role">{lang === "en" ? "Legal Counsel · Vietnam" : "Cố vấn Pháp lý · Việt Nam"}</div>
             <p>
@@ -718,7 +707,7 @@ function Partners({ lang }) {
     <>
       <PageBanner
         eyebrow={lang === "en" ? "04 · Partners & Clients" : "04 · Đối tác & Khách hàng"}
-        title={lang === "en" ? "An international network. Local expertise." : "Mạng lưới quốc tế. Chuyên môn địa phương."}
+        title={lang === "en" ? "An international network. Multi-sector clients." : "Mạng lưới quốc tế. Khách hàng đa lĩnh vực."}
         lead={lang === "en"
           ? "We work alongside an international accounting network and trusted local counsel."
           : "Hợp tác với mạng lưới kế toán quốc tế và đối tác pháp lý địa phương đáng tin cậy."}

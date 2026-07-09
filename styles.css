@@ -187,7 +187,8 @@ section { padding: 8rem 0; position: relative; }
 .hero-title .brand-underline {
   display: inline-block;
   position: relative;
-  padding-bottom: 0.4rem;
+  padding-bottom: 1.2rem;
+  white-space: nowrap;
 }
 .hero-title .brand-underline::after {
   content: "";
@@ -205,15 +206,25 @@ section { padding: 8rem 0; position: relative; }
   margin-bottom: 3rem;
   line-height: 1.6;
   max-width: 70ch;
+  text-align: justify;
 }
 .hero-subtitle p { margin: 0; }
 .hero-subtitle p + p { margin-top: 1.6rem; }
 .values-underline {
   font-weight: 700;
-  text-decoration: underline;
-  text-decoration-color: var(--orange);
-  text-decoration-thickness: 0.18em;
-  text-underline-offset: 0.18em;
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+  padding-bottom: 0.25em;
+}
+.values-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0.12em;
+  background: var(--orange);
 }
 
 .hero-body {
@@ -224,6 +235,7 @@ section { padding: 8rem 0; position: relative; }
   font-size: 1.7rem; line-height: 1.85;
   color: var(--blue);
   margin-bottom: 1.8rem;
+  text-align: justify;
 }
 .hero-body p .orange,
 .section-intro .orange { color: var(--orange); font-weight: 700; }
@@ -583,6 +595,7 @@ section { padding: 8rem 0; position: relative; }
 .about-body p {
   font-size: 1.7rem; line-height: 1.85;
   margin-bottom: 2rem;
+  text-align: justify;
 }
 .about-body p .orange { color: var(--orange); font-weight: 700; }
 .about-subhead {
@@ -718,6 +731,7 @@ section { padding: 8rem 0; position: relative; }
   font-size: 1.5rem; line-height: 1.8;
   color: var(--blue);
   margin-bottom: 1.5rem;
+  text-align: justify;
 }
 .team-detail .right p.vn { font-style: italic; color: var(--gray); }
 .team-detail .right .contact-row {
@@ -833,6 +847,19 @@ section { padding: 8rem 0; position: relative; }
   margin-bottom: 2.5rem;
   font-size: 1.4rem; font-weight: 700;
   letter-spacing: 0.15em; color: var(--gray);
+}
+.partner-card .logo-slot.has-img {
+  background: #fff;
+  border: 1px solid var(--gray-soft);
+  padding: 2rem;
+  overflow: hidden;
+}
+.partner-card .logo-slot.has-img img {
+  min-width: 0;
+  min-height: 0;
+  max-width: 80%;
+  max-height: 100%;
+  object-fit: contain;
 }
 .partner-card h4 {
   font-size: 2.2rem; font-weight: 800; color: var(--blue); margin-bottom: 0.4rem;
@@ -1803,6 +1830,7 @@ section { padding: 8rem 0; position: relative; }
   color: var(--olive-dark);
   margin-bottom: 2.4rem;
   max-width: 68ch;
+  text-align: justify;
 }
 .sd-intro {
   font-size: 1.6rem;
